@@ -1,0 +1,153 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     lcdlat
+006     lcd
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 i
+022     eeprom_adres
+023     data
+024     @PRINTF_U_640.P1
+024     lcd_init.i
+024-027 atan2.y
+024     MAIN.@SCRATCH1
+024     @PSTRINGC7_640.@SCRATCH1
+025     @PRINTF_U_640.P1
+025     @PRINTF_X_640.P2
+025     lcd_init.@SCRATCH1
+025     MAIN.@SCRATCH2
+025     @PSTRINGC7_640.@SCRATCH2
+026     @PRINTF_X_640.P1
+026     @DIV88.P2
+026     MAIN.@SCRATCH3
+026     @PSTRINGC7_640.@SCRATCH3
+027     @DIV88.P1
+027     MAIN.@SCRATCH4
+027     @PSTRINGC7_640.@SCRATCH4
+028-02B atan2.x
+028     lcd_putc.c
+028-02B floor.x
+028     @DIV88.@SCRATCH1
+029     lcd_gotoxy.x
+029     @delay_ms1.P1
+02A     lcd_gotoxy.y
+02B     lcd_gotoxy.address
+02C-02F atan2.z
+02C-02F CEIL_FLOOR.x
+02C     lcd_gotoxy.@SCRATCH1
+02D     lcd_send_byte.address
+02E     lcd_send_byte.n
+02F     lcd_read_byte.low
+02F     lcd_send_byte.@SCRATCH1
+030     lcd_read_byte.high
+030.0   atan2.sign
+030     CEIL_FLOOR.n
+030     lcd_send_nibble.n
+031     atan2.quad
+031-034 CEIL_FLOOR.y
+031     lcd_read_byte.@SCRATCH1
+035-038 CEIL_FLOOR.res
+039-03A CEIL_FLOOR.l
+03B.0   CEIL_FLOOR.s
+03C-03F @SFTOI.P1
+03C-03F @MULFF.P2
+03C-03F @FLT.P3
+03C     CEIL_FLOOR.@SCRATCH1
+03D     CEIL_FLOOR.@SCRATCH2
+03E     CEIL_FLOOR.@SCRATCH3
+03F     CEIL_FLOOR.@SCRATCH4
+040-043 @FLT.P1
+040-043 @MULFF.P2
+040-043 @ADDFF.P3
+040-041 @ITOF.P4
+044-047 @ADDFF.P1
+044     @FLT.@SCRATCH1
+044     @MULFF.@SCRATCH1
+045     @FLT.@SCRATCH2
+045     @MULFF.@SCRATCH2
+046     @MULFF.@SCRATCH3
+047     @MULFF.@SCRATCH4
+048     @MULFF.@SCRATCH5
+048     @ADDFF.@SCRATCH1
+049     @ADDFF.@SCRATCH2
+04A     @ADDFF.@SCRATCH3
+04B     @ADDFF.@SCRATCH4
+04C     @ADDFF.@SCRATCH5
+04D     @ADDFF.@SCRATCH6
+04E     @ADDFF.@SCRATCH7
+04F     @ADDFF.@SCRATCH8
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const800.call
+000014  @const802.call
+00001B  @delay_ms1
+000030  lcd_send_nibble
+00003C  lcd_read_nibble
+000042  lcd_send_byte
+000048  lcd_read_byte
+000082  lcd_init
+0000B5  lcd_gotoxy
+0000C7  lcd_putc
+0000F3  @PSTRINGC7_640
+00013E  @ITOF
+00015B  @FLT
+00019A  @SFTOI
+0001B9  @MULFF
+00022E  @ADDFF
+00036F  floor
+000378  CEIL_FLOOR
+00050B  @DIV88
+000520  @PRINTF_U_640
+000557  @PRINTF_X_640
+00057A  @cinit1
+00057A  MAIN
+00057F  @cinit2
+
+Project Directory:
+    Y:\ccs c\ccs c projects\App37_Internal_EEPROM_2_bitBybit\
+
+Project Files:
+    bit_by_bit.c                                            [25-Jun-19 15:08  CRC=83EEAE8A]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [21-Jun-13 16:04  CRC=A355A189]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [23-Aug-12 09:01  CRC=D28E8746]
+    C:\Program Files (x86)\PICC\Drivers\math.h              [28-Sep-12 11:35  CRC=546412C9]
+
+Source signature=A29AFCEB
+
+Units:
+    bit_by_bit (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   bit_by_bit.xsym
+    Errors:      bit_by_bit.err
+    Ext Symbols: bit_by_bit.esym
+    INHX8:       bit_by_bit.hex
+    Symbols:     bit_by_bit.sym
+    List:        bit_by_bit.lst
+    Debug/COFF:  bit_by_bit.cof
+    Project:     bit_by_bit.ccspjt
+    Call Tree:   bit_by_bit.tre
+    Statistics:  bit_by_bit.STA

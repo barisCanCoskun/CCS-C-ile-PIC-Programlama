@@ -1,0 +1,84 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-024 S
+025-029 E
+02A-02E N
+02F-033 i
+034-038 V
+039-03D Y
+03E-042 O
+043-047 R
+048-04C U
+04D-051 M
+052-056 K
+057-058 matris_karakter_gonder.harf
+057     MAIN.@SCRATCH1
+059     matris_karakter_gonder.tekrar
+05A     matris_karakter_gonder.i
+05B     matris_karakter_gonder.j
+05C     matris_karakter_gonder.K
+05D     sutunSec.S
+05D     @delay_ms1.P1
+05D     matris_karakter_gonder.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  sutunSec
+00001C  @goto23604
+000025  @delay_ms1
+00003A  matris_karakter_gonder
+000063  MAIN
+000063  @cinit1
+00006B  @cinit2
+
+Project Directory:
+    Y:\ccs c projects\App13_seni_seviyorum\
+
+Project Files:
+    seni_seviyorum.c                                        [30-May-19 15:55  CRC=24F1C9A4]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [06-Apr-19 10:06  CRC=7B95242E]
+
+Source signature=1C1C1200
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=F4D4
+
+Units:
+    Y:\ccs c projects\App13_seni_seviyorum\seni_seviyorum (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   seni_seviyorum.xsym
+    Errors:      seni_seviyorum.err
+    Ext Symbols: seni_seviyorum.esym
+    INHX8:       seni_seviyorum.hex
+    Symbols:     seni_seviyorum.sym
+    List:        seni_seviyorum.lst
+    Debug/COFF:  seni_seviyorum.cof
+    Project:     seni_seviyorum.ccspjt
+    Call Tree:   seni_seviyorum.tre
+    Statistics:  seni_seviyorum.STA

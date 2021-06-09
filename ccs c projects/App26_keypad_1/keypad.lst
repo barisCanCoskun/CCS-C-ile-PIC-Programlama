@@ -1,0 +1,358 @@
+CCS PCM C Compiler, Version 5.084d, 1               11-Jun-19 13:19
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   Y:\ccs c projects\App26_keypad\keypad.lst
+
+               ROM used:   190 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           7 (2%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   096
+0003:  NOP
+....................  
+.................... #include <16f877.h> 
+.................... //////////// Standard Header file for the PIC16F877 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877 
+....................  
+.................... #list 
+....................  
+....................  
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD 
+....................  
+.................... #use delay (clock = 4000000) 
+0004:  MOVLW  21
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETURN
+....................  
+.................... #use fast_io(b) 
+.................... #use fast_io(d) 
+....................  
+.................... #byte portb = 0x06 
+....................  
+.................... #define sut1 pin_d0 
+.................... #define sut2 pin_d1 
+.................... #define sut3 pin_d2 
+.................... #define sut4 pin_d3 
+....................  
+.................... #define sat1 pin_d4 
+.................... #define sat2 pin_d5 
+.................... #define sat3 pin_d6 
+.................... #define sat4 pin_d7 
+....................  
+.................... char tus = 0; 
+....................  
+.................... char keypad_read() 
+.................... { 
+....................    output_d(0x00); 
+0019:  CLRF   08
+....................     
+....................    output_high(sat1); 
+001A:  BSF    08.4
+....................    if(input(sut1)){ 
+001B:  BTFSS  08.0
+001C:  GOTO   022
+....................       delay_ms(20); 
+001D:  MOVLW  14
+001E:  MOVWF  21
+001F:  CALL   004
+....................       tus = 1; 
+0020:  MOVLW  01
+0021:  MOVWF  20
+....................    } 
+....................    if(input(sut2)){ 
+0022:  BTFSS  08.1
+0023:  GOTO   029
+....................       delay_ms(20); 
+0024:  MOVLW  14
+0025:  MOVWF  21
+0026:  CALL   004
+....................       tus = 2; 
+0027:  MOVLW  02
+0028:  MOVWF  20
+....................    } 
+....................    if(input(sut3)){ 
+0029:  BTFSS  08.2
+002A:  GOTO   030
+....................       delay_ms(20); 
+002B:  MOVLW  14
+002C:  MOVWF  21
+002D:  CALL   004
+....................       tus = 3; 
+002E:  MOVLW  03
+002F:  MOVWF  20
+....................    } 
+....................    if(input(sut4)){ 
+0030:  BTFSS  08.3
+0031:  GOTO   037
+....................       delay_ms(20); 
+0032:  MOVLW  14
+0033:  MOVWF  21
+0034:  CALL   004
+....................       tus = 0xA; 
+0035:  MOVLW  0A
+0036:  MOVWF  20
+....................    } 
+....................    output_low(sat1); 
+0037:  BCF    08.4
+....................     
+....................    output_high(sat2); 
+0038:  BSF    08.5
+....................    if(input(sut1)){ 
+0039:  BTFSS  08.0
+003A:  GOTO   040
+....................       delay_ms(20); 
+003B:  MOVLW  14
+003C:  MOVWF  21
+003D:  CALL   004
+....................       tus = 4; 
+003E:  MOVLW  04
+003F:  MOVWF  20
+....................    } 
+....................    if(input(sut2)){ 
+0040:  BTFSS  08.1
+0041:  GOTO   047
+....................       delay_ms(20); 
+0042:  MOVLW  14
+0043:  MOVWF  21
+0044:  CALL   004
+....................       tus = 5; 
+0045:  MOVLW  05
+0046:  MOVWF  20
+....................    } 
+....................    if(input(sut3)){ 
+0047:  BTFSS  08.2
+0048:  GOTO   04E
+....................       delay_ms(20); 
+0049:  MOVLW  14
+004A:  MOVWF  21
+004B:  CALL   004
+....................       tus = 6; 
+004C:  MOVLW  06
+004D:  MOVWF  20
+....................    } 
+....................    if(input(sut4)){ 
+004E:  BTFSS  08.3
+004F:  GOTO   055
+....................       delay_ms(20); 
+0050:  MOVLW  14
+0051:  MOVWF  21
+0052:  CALL   004
+....................       tus = 0xB; 
+0053:  MOVLW  0B
+0054:  MOVWF  20
+....................    } 
+....................    output_low(sat2); 
+0055:  BCF    08.5
+....................     
+....................    output_high(sat3); 
+0056:  BSF    08.6
+....................    if(input(sut1)){ 
+0057:  BTFSS  08.0
+0058:  GOTO   05E
+....................       delay_ms(20); 
+0059:  MOVLW  14
+005A:  MOVWF  21
+005B:  CALL   004
+....................       tus = 7; 
+005C:  MOVLW  07
+005D:  MOVWF  20
+....................    } 
+....................    if(input(sut2)){ 
+005E:  BTFSS  08.1
+005F:  GOTO   065
+....................       delay_ms(20); 
+0060:  MOVLW  14
+0061:  MOVWF  21
+0062:  CALL   004
+....................       tus = 8; 
+0063:  MOVLW  08
+0064:  MOVWF  20
+....................    } 
+....................    if(input(sut3)){ 
+0065:  BTFSS  08.2
+0066:  GOTO   06C
+....................       delay_ms(20); 
+0067:  MOVLW  14
+0068:  MOVWF  21
+0069:  CALL   004
+....................       tus = 9; 
+006A:  MOVLW  09
+006B:  MOVWF  20
+....................    } 
+....................    if(input(sut4)){ 
+006C:  BTFSS  08.3
+006D:  GOTO   073
+....................       delay_ms(20); 
+006E:  MOVLW  14
+006F:  MOVWF  21
+0070:  CALL   004
+....................       tus = 0xC; 
+0071:  MOVLW  0C
+0072:  MOVWF  20
+....................    } 
+....................    output_low(sat3); 
+0073:  BCF    08.6
+....................     
+....................    output_high(sat4); 
+0074:  BSF    08.7
+....................    if(input(sut1)){ 
+0075:  BTFSS  08.0
+0076:  GOTO   07C
+....................       delay_ms(20); 
+0077:  MOVLW  14
+0078:  MOVWF  21
+0079:  CALL   004
+....................       tus = 0xE; 
+007A:  MOVLW  0E
+007B:  MOVWF  20
+....................    } 
+....................    if(input(sut2)){ 
+007C:  BTFSS  08.1
+007D:  GOTO   082
+....................       delay_ms(20); 
+007E:  MOVLW  14
+007F:  MOVWF  21
+0080:  CALL   004
+....................       tus = 0; 
+0081:  CLRF   20
+....................    } 
+....................    if(input(sut3)){ 
+0082:  BTFSS  08.2
+0083:  GOTO   089
+....................       delay_ms(20); 
+0084:  MOVLW  14
+0085:  MOVWF  21
+0086:  CALL   004
+....................       tus = 0xF; 
+0087:  MOVLW  0F
+0088:  MOVWF  20
+....................    } 
+....................    if(input(sut4)){ 
+0089:  BTFSS  08.3
+008A:  GOTO   090
+....................       delay_ms(20); 
+008B:  MOVLW  14
+008C:  MOVWF  21
+008D:  CALL   004
+....................       tus = 0xD; 
+008E:  MOVLW  0D
+008F:  MOVWF  20
+....................    } 
+....................    output_low(sat4); 
+0090:  BCF    08.7
+....................     
+....................    return tus; 
+0091:  MOVF   20,W
+0092:  MOVWF  78
+0093:  BCF    0A.3
+0094:  BCF    0A.4
+0095:  GOTO   0BA (RETURN)
+.................... } 
+....................  
+.................... void main() 
+0096:  MOVF   03,W
+0097:  ANDLW  1F
+0098:  MOVWF  03
+0099:  CLRF   20
+009A:  BSF    03.5
+009B:  BSF    1F.0
+009C:  BSF    1F.1
+009D:  BSF    1F.2
+009E:  BCF    1F.3
+009F:  BCF    03.7
+.................... { 
+....................    setup_psp(PSP_DISABLED); 
+00A0:  BCF    09.4
+....................    setup_timer_1(T1_DISABLED); 
+00A1:  BCF    03.5
+00A2:  CLRF   10
+....................    setup_timer_2(T2_DISABLED, 0, 1); 
+00A3:  MOVLW  00
+00A4:  MOVWF  78
+00A5:  MOVWF  12
+00A6:  MOVLW  00
+00A7:  BSF    03.5
+00A8:  MOVWF  12
+....................    setup_adc_ports(NO_ANALOGS); 
+00A9:  BSF    1F.0
+00AA:  BSF    1F.1
+00AB:  BSF    1F.2
+00AC:  BCF    1F.3
+....................    setup_adc(ADC_OFF); 
+00AD:  BCF    03.5
+00AE:  BCF    1F.0
+....................    setup_CCP1(CCP_OFF); 
+00AF:  MOVLW  F0
+00B0:  ANDWF  17,F
+....................    setup_CCP2(CCP_OFF);  
+00B1:  ANDWF  1D,F
+....................     
+....................    set_tris_b(0x00); 
+00B2:  MOVLW  00
+00B3:  BSF    03.5
+00B4:  MOVWF  06
+....................    set_tris_d(0x0f); 
+00B5:  MOVLW  0F
+00B6:  MOVWF  08
+....................     
+....................    output_b(0x00); 
+00B7:  BCF    03.5
+00B8:  CLRF   06
+....................     
+....................    while(true) 
+....................       portb = keypad_read(); 
+00B9:  GOTO   019
+00BA:  MOVF   78,W
+00BB:  MOVWF  06
+00BC:  GOTO   0B9
+....................     
+.................... } 
+....................  
+00BD:  SLEEP
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

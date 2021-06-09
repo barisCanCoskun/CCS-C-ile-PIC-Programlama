@@ -1,0 +1,83 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=7
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=displayApp1.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=displayApp1.c
+
+[displayApp1.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=displayApp1.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=displayApp1.c
+t1=21
+2=displayApp1.c
+t2=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=21-05-2019
+D1_L=8
+D1_L1=[80903]Project Closed.
+D1_L2=[80903]Project Opened.
+D1_L3=[80906]Started Editing.
+D1_L4=[81318]Stopped Editing.
+D1_L5=[81429]Started Editing.
+D1_L6=[82272]Stopped Editing.
+D1_L7=[85558]Started Editing.
+D1_L8=[85653]Project Closed.
+[Units]
+Count=1
+1=displayApp1 (main)

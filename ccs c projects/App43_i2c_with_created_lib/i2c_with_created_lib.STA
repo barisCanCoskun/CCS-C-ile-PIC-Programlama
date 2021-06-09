@@ -1,0 +1,69 @@
+
+ROM used:   935/8192 (11%)
+            935/8192 (11%) including unused fragments
+
+            1.2 Average locations per line
+            15.3 Average locations per statement
+
+RAM used:   10/368 (3%) at main() level
+            15/368 (4%) worst case
+
+Stack used: 0 worst case (0 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   73    31  51  i2c_with_created_lib.c
+  629     0   0  C:\Program Files (x86)\PICC\Devices\16f877.h
+   31     8  13  C:\Program Files (x86)\PICC\Drivers\kendi_input.c
+   61    22  36  C:\Program Files (x86)\PICC\Drivers\kendi_2402.c
+----- -----
+  794    61 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+ Inline         1             @delay_ms1
+ Inline         3             @I2C_READ_1
+0     74   8    1             @I2C_WRITE_1
+0     33   4    2   169  4.4  hex_oku1
+0     14   1    3   108  3.3  hex_oku2
+0     59   6    1    84  2.4  eeprom_hazirmi
+0     85   9    2   156  2.8  eeprom_yaz
+0    163  17    2   207  3.3  eeprom_oku
+0    165  18    1   872  5.2  MAIN
+0     14   1    0    84  2.4  @const639
+0     77   8    4   134  2.8  @PSTRINGC7_9600_62_63
+0     23   2    0   207  3.3  @const641
+0     14   1    0   872  5.2  @const642
+0     12   1    0             @const643
+0     15   2    0             @const644
+0     19   2    0             @const645
+0      7   1    0             @const646
+0     88   9    5             @PSTRINGCN7_9600_62_63
+0     37   4    2             @PRINTF_X_9600_62_63
+0     22   2    0             @const652
+0     10   1    0             @const653
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               10
+    Statements              61
+    Comments                103
+    Volume (V)              4502
+    Difficulty (D)          34.4
+    Effort to implement (E) 155004
+    Time to implement (T)   2 hours, 24 minutes
+    Est Delivered Bugs (B)  1
+    Cyclomatic Complexity   7
+    Maintainability (MI)    61
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   931  1113  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

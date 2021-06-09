@@ -1,0 +1,19 @@
+ÀÄmatris_led_display
+   ÀÄMAIN  0/138  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄmatris_karakter_gonder  0/60  Ram=7
+      ³  ÃÄsutunSec  0/24  Ram=1
+      ³  ³  ÀÄ@goto51839  0/9  Ram=0
+      ³  ÀÄ@delay_ms1  (Inline)  Ram=1
+      ÃÄmatris_karakter_gonder  0/60  Ram=7
+      ³  ÀÄ*
+      ÃÄmatris_karakter_gonder  0/60  Ram=7
+      ³  ÀÄ*
+      ÃÄmatris_karakter_gonder  0/60  Ram=7
+      ³  ÀÄ*
+      ÃÄmatris_karakter_gonder  0/60  Ram=7
+      ³  ÀÄ*
+      ÃÄmatris_karakter_gonder  0/60  Ram=7
+      ³  ÀÄ*
+      ÀÄmatris_karakter_gonder  0/60  Ram=7
+         ÀÄ*

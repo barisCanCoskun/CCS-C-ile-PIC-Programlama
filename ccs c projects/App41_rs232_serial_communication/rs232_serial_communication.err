@@ -1,0 +1,7 @@
+>>> Warning 216 "rs232_serial_communication.c" Line 65(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "rs232_serial_communication.c" Line 65(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_nibble)
+>>> Warning 216 "rs232_serial_communication.c" Line 65(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
+>>> Warning 216 "rs232_serial_communication.c" Line 65(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGC7_9600_62_63)
+      Memory usage:   ROM=12%      RAM=39% - 44%
+      0 Errors,  4 Warnings.
+Build Successful.

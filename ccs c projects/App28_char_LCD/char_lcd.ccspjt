@@ -1,0 +1,80 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=1
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=char_lcd.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=char_lcd.c
+
+[char_lcd.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=char_lcd.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=char_lcd.c
+t1=1
+2=char_lcd.c
+t2=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=16-06-2019
+D1_L=5
+D1_L1=[63059]Project Closed.
+D1_L2=[63059]Project Opened.
+D1_L3=[63061]Started Editing.
+D1_L4=[63367]Stopped Editing.
+D1_L5=[69295]Project Closed.
+[Units]
+Count=1
+1=char_lcd (main)

@@ -1,0 +1,64 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+006     portb
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     giris
+021     main.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  main
+000004  @cinit1
+00000C  @cinit2
+0026  basla
+
+Project Directory:
+    Y:\ccs c projects\App4_portOkuma_portaBilgiGönderme\
+
+Project Files:
+    portOkuma_bilgiGönderme.c                               [20-May-19 21:50  CRC=135B3A92]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [06-Apr-19 10:06  CRC=7B95242E]
+
+Source signature=0A8582EE
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=25A2
+
+Units:
+    Y:\ccs c projects\App4_portOkuma_portaBilgiGönderme\portOkuma_bilgiGönderme (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   portOkuma_bilgiGönderme.xsym
+    Errors:      portOkuma_bilgiGönderme.err
+    Ext Symbols: portOkuma_bilgiGönderme.esym
+    INHX8:       portOkuma_bilgiGönderme.hex
+    Symbols:     portOkuma_bilgiGönderme.sym
+    List:        portOkuma_bilgiGönderme.lst
+    Debug/COFF:  portOkuma_bilgiGönderme.cof
+    Project:     portOkuma_bilgiGönderme.ccspjt
+    Call Tree:   portOkuma_bilgiGönderme.tre
+    Statistics:  portOkuma_bilgiGönderme.STA

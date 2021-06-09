@@ -1,0 +1,7 @@
+ÀÄmuxing_port_with_8255
+   ÀÄMAIN  0/48  Ram=0
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄ_8255_yazma  0/60  Ram=2
+      ÃÄ_8255_yazma  0/60  Ram=2
+      ÃÄ_8255_okuma  0/65  Ram=1
+      ÀÄ_8255_yazma  0/60  Ram=2

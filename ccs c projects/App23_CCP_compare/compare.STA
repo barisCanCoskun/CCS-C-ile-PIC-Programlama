@@ -1,0 +1,50 @@
+
+ROM used:   127/8192 (2%)
+            127/8192 (2%) including unused fragments
+
+            0.2 Average locations per line
+            5.5 Average locations per statement
+
+RAM used:   13/368 (4%) at main() level
+            13/368 (4%) worst case
+
+Stack used: 1 worst case (0 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   72    23 100  compare.c
+  653     0   0  C:\Program Files (x86)\PICC\Devices\16f877.h
+----- -----
+  725    23 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0      6   5    0     17  0.8  capture1_interrupt
+0      9   7    0     32  1.0  compare2_interrupt
+0     54  43    0    472  3.3  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               3
+    Statements              23
+    Comments                117
+    Volume (V)              604
+    Difficulty (D)          5.6
+    Effort to implement (E) 3410
+    Time to implement (T)   3 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   1
+    Maintainability (MI)    98
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00039    54  0  
+0003A-007FF    69  1921  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

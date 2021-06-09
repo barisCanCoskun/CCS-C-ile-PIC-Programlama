@@ -1,0 +1,355 @@
+ÀÄÃ¶zel_karakterli_LCD
+   ÀÄMAIN  0/205  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄlcd_hazirla  0/81  Ram=2
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄlcd_komut  0/52  Ram=3
+      ³     ÀÄ*
+      ÃÄozel_karakterler  0/372  Ram=0
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_veri  0/98  Ram=2
+      ³     ÀÄ*
+      ÃÄimlec  0/20  Ram=3
+      ³  ÃÄlcd_komut  0/52  Ram=3
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_komut  0/52  Ram=3
+      ³     ÀÄ*
+      ÃÄ@PSTRINGC_632  0/44  Ram=2
+      ³  ÀÄlcd_veri  0/98  Ram=2
+      ³     ÀÄ*
+      ÃÄimlec  0/20  Ram=3
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC7_632  0/88  Ram=4
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÀÄlcd_veri  0/98  Ram=2
+      ³     ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄlcd_komut  0/52  Ram=3
+      ³  ÀÄ*
+      ÃÄ@PSTRINGC_632  0/44  Ram=2
+      ³  ÀÄ*
+      ÃÄimlec  0/20  Ram=3
+      ³  ÀÄ*
+      ÃÄlcd_veri  0/98  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄlcd_veri  0/98  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄlcd_veri  0/98  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄlcd_veri  0/98  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄlcd_veri  0/98  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄlcd_veri  0/98  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄlcd_veri  0/98  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄlcd_veri  0/98  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÃÄlcd_komut  0/52  Ram=3
+      ³  ÀÄ*
+      ÃÄ@PSTRINGCN_632  0/42  Ram=3
+      ³  ÀÄlcd_veri  0/98  Ram=2
+      ³     ÀÄ*
+      ÃÄ@PRINTF_L32D_632FPFPF  0/341  Ram=13
+      ³  ÃÄ@MULFF  (Inline)  Ram=13
+      ³  ÃÄ@FTOSD  (Inline)  Ram=5
+      ³  ÃÄ@DIV3232  0/79  Ram=13
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÃÄlcd_veri  0/98  Ram=2
+      ³  ³  ÀÄ*
+      ³  ÀÄ@DIV3232  0/79  Ram=13
+      ÃÄlcd_veri  0/98  Ram=2
+      ³  ÀÄ*
+      ÃÄlcd_veri  0/98  Ram=2
+      ³  ÀÄ*
+      ÃÄ@delay_ms1  0/21  Ram=1
+      ÀÄlcd_komut  0/52  Ram=3
+         ÀÄ*

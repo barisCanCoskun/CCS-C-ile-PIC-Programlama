@@ -1,0 +1,127 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-023 x
+024-025 @sprintf_string
+026     @PSTRINGCN_632.P1
+026     lcd_hazirla.i
+026     imlec.satir
+026-029 @PRINTF_L32D_632FPFPF.P1
+026     MAIN.@SCRATCH1
+026     @PSTRINGC_632.@SCRATCH1
+026     @PSTRINGC7_632.@SCRATCH1
+027     imlec.sutun
+027     lcd_hazirla.@SCRATCH1
+027     @PSTRINGC_632.@SCRATCH2
+027     @PSTRINGC7_632.@SCRATCH2
+027     @PSTRINGCN_632.@SCRATCH1
+028     imlec.@SCRATCH1
+028     @PSTRINGC7_632.@SCRATCH3
+028     @PSTRINGCN_632.@SCRATCH2
+029     lcd_komut.komut
+029     @PSTRINGC7_632.@SCRATCH4
+02A     @PRINTF_L32D_632FPFPF.P1
+02A     lcd_komut.@SCRATCH1
+02B     lcd_komut.@SCRATCH2
+02B     @PRINTF_L32D_632FPFPF.@SCRATCH1
+02C     @PRINTF_L32D_632FPFPF.@SCRATCH2
+02D     @PRINTF_L32D_632FPFPF.@SCRATCH3
+02E     @PRINTF_L32D_632FPFPF.@SCRATCH4
+02F     @PRINTF_L32D_632FPFPF.@SCRATCH5
+030     @PRINTF_L32D_632FPFPF.@SCRATCH6
+031     @PRINTF_L32D_632FPFPF.@SCRATCH7
+032     @PRINTF_L32D_632FPFPF.@SCRATCH8
+033-036 @DIV3232.P1
+033-036 @MULFF.P2
+033     lcd_veri.veri
+033-036 @FTOSD.P1
+034     @delay_ms1.P1
+034     lcd_veri.@SCRATCH1
+037-03A @MULFF.P1
+037-03A @DIV3232.P2
+037     @FTOSD.@SCRATCH1
+03B     @MULFF.@SCRATCH1
+03B     @DIV3232.@SCRATCH1
+03C     @MULFF.@SCRATCH2
+03C     @DIV3232.@SCRATCH2
+03D     @MULFF.@SCRATCH3
+03D     @DIV3232.@SCRATCH3
+03E     @MULFF.@SCRATCH4
+03E     @DIV3232.@SCRATCH4
+03F     @MULFF.@SCRATCH5
+03F     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const644.call
+000014  @const649.call
+00001C  @const651.call
+00002D  @const660.call
+00003B  @delay_ms1
+000050  lcd_komut
+000084  lcd_hazirla
+0000D5  lcd_veri
+000137  ozel_karakterler
+0002AB  imlec
+0002BF  @PSTRINGC_632
+0002EB  @PSTRINGC7_632
+000343  @PSTRINGCN_632
+00036D  @DIV3232
+0003BC  @PRINTF_L32D_632FPFPF
+0003D0  @MULFF
+000456  @FTOSD
+000511  MAIN
+000511  @cinit1
+000521  @cinit2
+
+Project Directory:
+    Y:\ccs c projects\App31_özel_karakterli_LCD\
+
+Project Files:
+    özel_karakterli_LCD.c                                  [19-Jun-19 12:38  CRC=4A1B7736]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [06-Apr-19 10:06  CRC=7B95242E]
+    C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c [19-Jun-19 12:37  CRC=A03450AC]
+
+Source signature=06193CBC
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=09FB
+
+Units:
+    Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   özel_karakterli_LCD.xsym
+    Errors:      özel_karakterli_LCD.err
+    Ext Symbols: özel_karakterli_LCD.esym
+    INHX8:       özel_karakterli_LCD.hex
+    Symbols:     özel_karakterli_LCD.sym
+    List:        özel_karakterli_LCD.lst
+    Debug/COFF:  özel_karakterli_LCD.cof
+    Project:     özel_karakterli_LCD.ccspjt
+    Call Tree:   özel_karakterli_LCD.tre
+    Statistics:  özel_karakterli_LCD.STA

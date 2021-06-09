@@ -1,0 +1,51 @@
+
+ROM used:   235/8192 (3%)
+            235/8192 (3%) including unused fragments
+
+            0.3 Average locations per line
+            7.6 Average locations per statement
+
+RAM used:   40/368 (11%) at main() level
+            47/368 (13%) worst case
+
+Stack used: 1 worst case (1 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   86    31 100  matris_led_display.c
+  653     0   0  C:\Program Files (x86)\PICC\Devices\16f877.h
+----- -----
+  739    31 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+ Inline         1             @delay_ms1
+0     24  10    1    192  3.0  sutunSec
+0      9   4    0   1177  5.9  @goto51839
+0     60  26    7    364  4.4  matris_karakter_gonder
+0    138  59    0    494  2.4  MAIN
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               4
+    Statements              31
+    Comments                114
+    Volume (V)              2913
+    Difficulty (D)          15.7
+    Effort to implement (E) 45655
+    Time to implement (T)   42 minutes
+    Est Delivered Bugs (B)  0
+    Cyclomatic Complexity   10
+    Maintainability (MI)    149
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   231  1813  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

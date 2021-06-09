@@ -1,0 +1,91 @@
+
+ROM used:   2443/8192 (30%)
+            3227/8192 (39%) including unused fragments
+
+            0.8 Average locations per line
+            3.7 Average locations per statement
+
+RAM used:   32/368 (9%) at main() level
+            46/368 (12%) worst case
+
+Stack used: 1 worst case (0 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  249   153  23  spi_hw_25aa128_eeprom.c
+  629     0   0  C:\Program Files (x86)\PICC\Devices\16f877.h
+  269    29   4  C:\Program Files (x86)\PICC\Drivers\input.c
+   28     0   0  C:\Program Files (x86)\PICC\Drivers\ctype.h
+ 1351   359  54  C:\Program Files (x86)\PICC\Drivers\stdlib.h
+   32     0   0  C:\Program Files (x86)\PICC\Drivers\stddef.h
+  423   125  19  C:\Program Files (x86)\PICC\Drivers\string.h
+----- -----
+ 2981   666 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     21   1    1             @delay_ms1
+0     33   1    2   174  4.4  gethex1
+0     22   1    3   171  4.8  gethex
+0     65   3    7   645 10.1  get_string
+ Inline         6             @MULS1616
+0    308  13   11  1817 10.4  atol
+0     19   1    0    48  1.1  SPI_interrupt
+1   1179  48    1  5885  7.9  MAIN
+0     14   1    0             @const910
+0     77   3    4             @PSTRINGC7_9600_62_63
+0     24   1    0             @const912
+0     14   1    0             @const913
+0     19   1    0             @const914
+0     31   1    0             @const915
+0     21   1    0             @const916
+0     16   1    0             @const917
+0     17   1    0             @const918
+0     17   1    0             @const919
+0     20   1    0             @const920
+0     19   1    0             @const921
+0     10   0    0             @const922
+0     16   1    0             @const923
+0     86   4    5             @PSTRINGCN7_9600_62_63
+0     89   4    9             @PRINTF_LU_9600_62_63
+0     35   1    2             @PRINTF_X_9600_62_63
+0     24   1    0             @const931
+0     11   0    0             @const932
+0     17   1    0             @const933
+0     22   1    0             @const934
+0     10   0    0             @const935
+0     10   0    0             @const936
+0     11   0    0             @const937
+0     29   1    0             @const938
+0     10   0    0             @const939
+0     11   0    0             @const940
+0     17   1    0             @const941
+0     19   1    0             @const942
+0     20   1    0             @const943
+0     11   0    0             @const944
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               6
+    Statements              666
+    Comments                944
+    Volume (V)              10717
+    Difficulty (D)          37.7
+    Effort to implement (E) 403561
+    Time to implement (T)   6 hours, 14 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   26
+    Maintainability (MI)    82
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00030    45  0  
+00031-007FF  1215  784  
+00800-00FFF  1179  869  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

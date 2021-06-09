@@ -1,0 +1,64 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+021     main.@SCRATCH1
+022     @delay_ms1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000019  @cinit1
+000019  main
+000021  @cinit2
+0039  basla
+
+Project Directory:
+    Y:\ccs c projects\App3_led_toggle\
+
+Project Files:
+    led_toggle.c                                            [20-May-19 20:10  CRC=C93BC8F4]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [06-Apr-19 10:06  CRC=7B95242E]
+
+Source signature=C0661150
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=5B29
+
+Units:
+    Y:\ccs c projects\App3_led_toggle\led_toggle (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   led_toggle.xsym
+    Errors:      led_toggle.err
+    Ext Symbols: led_toggle.esym
+    INHX8:       led_toggle.hex
+    Symbols:     led_toggle.sym
+    List:        led_toggle.lst
+    Debug/COFF:  led_toggle.cof
+    Project:     led_toggle.ccspjt
+    Call Tree:   led_toggle.tre
+    Statistics:  led_toggle.STA

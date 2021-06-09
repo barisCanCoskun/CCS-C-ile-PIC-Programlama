@@ -1,0 +1,78 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=1
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=timer_1_int_counter.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=timer_1_int_counter.c
+
+[timer_1_int_counter.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=timer_1_int_counter.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=timer_1_int_counter.c
+t1=5
+Count=1
+
+[ProjectLog]
+Days=1
+D1=10-06-2019
+D1_L=5
+D1_L1=[46181]Project Closed.
+D1_L2=[46181]Project Opened.
+D1_L3=[46184]Started Editing.
+D1_L4=[46484]Stopped Editing.
+D1_L5=[49689]Project Closed.
+[Units]
+Count=1
+1=timer_1_int_counter (main)

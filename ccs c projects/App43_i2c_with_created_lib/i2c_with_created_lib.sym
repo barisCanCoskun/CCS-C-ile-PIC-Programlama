@@ -1,0 +1,106 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     veri
+022     adres
+023     islem
+024     eeprom_oku.adres
+024     eeprom_yaz.adres
+024     hex_oku2.high
+024     MAIN.@SCRATCH1
+024     @PSTRINGC7_9600_62_63.@SCRATCH1
+025     @PSTRINGCN7_9600_62_63.P1
+025     eeprom_oku.veri
+025     hex_oku2.low
+025     @PRINTF_X_9600_62_63.P1
+025     eeprom_yaz.veri
+025     @PSTRINGC7_9600_62_63.@SCRATCH2
+026     hex_oku1.karakter
+026     @I2C_READ_1.P1
+026     @delay_ms1.P2
+026.0   eeprom_hazirmi.ack
+026     @PRINTF_X_9600_62_63.P1
+026     hex_oku2.@SCRATCH1
+026     @PSTRINGC7_9600_62_63.@SCRATCH3
+026     @PSTRINGCN7_9600_62_63.@SCRATCH1
+027     @I2C_WRITE_1.P1
+027     @I2C_READ_1.@SCRATCH1
+027     hex_oku1.@SCRATCH1
+027     @PSTRINGC7_9600_62_63.@SCRATCH4
+027     @PSTRINGCN7_9600_62_63.@SCRATCH2
+028     @I2C_READ_1.@SCRATCH2
+028     @PSTRINGCN7_9600_62_63.@SCRATCH3
+029     @PSTRINGCN7_9600_62_63.@SCRATCH4
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const639.call
+000012  @const641.call
+000029  @const642.call
+000037  @const643.call
+000043  @const644.call
+000052  @const645.call
+000065  @const646.call
+00006C  @const652.call
+000082  @const653.call
+00008C  @PSTRINGC7_9600_62_63
+0000D9  hex_oku1
+0000FA  hex_oku2
+000108  @I2C_WRITE_1
+000152  eeprom_hazirmi
+00018D  eeprom_oku
+0001CF  @I2C_READ_1
+000230  @PSTRINGCN7_9600_62_63
+000288  @PRINTF_X_9600_62_63
+0002AD  eeprom_yaz
+0002EB  @delay_ms1
+000302  MAIN
+000302  @cinit1
+000311  @cinit2
+
+Project Directory:
+    Y:\ccs c\ccs c projects\App43_i2c_with_created_lib\
+
+Project Files:
+    i2c_with_created_lib.c                                  [12-Jul-19 13:57  CRC=D4AB36CF]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [21-Jun-13 16:04  CRC=A355A189]
+    C:\Program Files (x86)\PICC\Drivers\kendi_input.c       [12-Jul-19 14:01  CRC=3FB2CF23]
+    C:\Program Files (x86)\PICC\Drivers\kendi_2402.c        [12-Jul-19 14:01  CRC=93CFF375]
+
+Source signature=DF538E65
+
+Units:
+    i2c_with_created_lib (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   i2c_with_created_lib.xsym
+    Errors:      i2c_with_created_lib.err
+    Ext Symbols: i2c_with_created_lib.esym
+    INHX8:       i2c_with_created_lib.hex
+    Symbols:     i2c_with_created_lib.sym
+    List:        i2c_with_created_lib.lst
+    Debug/COFF:  i2c_with_created_lib.cof
+    Project:     i2c_with_created_lib.ccspjt
+    Call Tree:   i2c_with_created_lib.tre
+    Statistics:  i2c_with_created_lib.STA

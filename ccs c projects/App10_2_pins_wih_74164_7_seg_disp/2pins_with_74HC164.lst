@@ -1,0 +1,216 @@
+CCS PCM C Compiler, Version 5.084d, 1               01-Jun-19 00:29
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   Y:\ccs c projects\App10_2_pins_wih_74164_7_seg_disp\2pins_with_74HC164.lst
+
+               ROM used:   128 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   18 (5%) at main() level
+                           19 (5%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   01B
+0003:  NOP
+....................  
+.................... #include <16f877.h> 
+.................... //////////// Standard Header file for the PIC16F877 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877 
+....................  
+.................... #list 
+....................  
+....................  
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD 
+....................  
+.................... #use delay (clock = 4000000) 
+0004:  MOVLW  2D
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  BCF    0A.3
+0019:  BCF    0A.4
+001A:  GOTO   07A (RETURN)
+....................  
+.................... #use fast_io(b) 
+....................  
+.................... #define data pin_b0 
+.................... #define clock pin_b1 
+....................  
+.................... int digit[10] = {0xC0, 0xF9, 0xA4, 0xB0, 0x99, 0x92, 0x83, 0xF8, 0x80, 0x90}; 
+*
+0026:  MOVLW  C0
+0027:  BCF    03.5
+0028:  MOVWF  20
+0029:  MOVLW  F9
+002A:  MOVWF  21
+002B:  MOVLW  A4
+002C:  MOVWF  22
+002D:  MOVLW  B0
+002E:  MOVWF  23
+002F:  MOVLW  99
+0030:  MOVWF  24
+0031:  MOVLW  92
+0032:  MOVWF  25
+0033:  MOVLW  83
+0034:  MOVWF  26
+0035:  MOVLW  F8
+0036:  MOVWF  27
+0037:  MOVLW  80
+0038:  MOVWF  28
+0039:  MOVLW  90
+003A:  MOVWF  29
+....................  
+.................... char i = 0, j = 0; 
+....................  
+.................... void main() 
+*
+001B:  MOVF   03,W
+001C:  ANDLW  1F
+001D:  MOVWF  03
+001E:  CLRF   2A
+001F:  CLRF   2B
+0020:  BSF    03.5
+0021:  BSF    1F.0
+0022:  BSF    1F.1
+0023:  BSF    1F.2
+0024:  BCF    1F.3
+0025:  BCF    03.7
+.................... { 
+....................    setup_psp(PSP_DISABLED); 
+*
+003B:  BSF    03.5
+003C:  BCF    09.4
+....................    setup_timer_1(T1_DISABLED); 
+003D:  BCF    03.5
+003E:  CLRF   10
+....................    setup_timer_2(T2_DISABLED, 0, 1); 
+003F:  MOVLW  00
+0040:  MOVWF  78
+0041:  MOVWF  12
+0042:  MOVLW  00
+0043:  BSF    03.5
+0044:  MOVWF  12
+....................    setup_adc_ports(NO_ANALOGS); 
+0045:  BSF    1F.0
+0046:  BSF    1F.1
+0047:  BSF    1F.2
+0048:  BCF    1F.3
+....................    setup_adc(ADC_OFF); 
+0049:  BCF    03.5
+004A:  BCF    1F.0
+....................    setup_CCP1(CCP_OFF); 
+004B:  MOVLW  F0
+004C:  ANDWF  17,F
+....................    setup_CCP2(CCP_OFF); 
+004D:  ANDWF  1D,F
+....................     
+....................    set_tris_b(0x00); 
+004E:  MOVLW  00
+004F:  BSF    03.5
+0050:  MOVWF  06
+....................     
+....................    output_b(0x00); 
+0051:  BCF    03.5
+0052:  CLRF   06
+....................     
+....................    while(true){ 
+....................       for(i = 0; i <= 9; i++){ 
+0053:  CLRF   2A
+0054:  MOVF   2A,W
+0055:  SUBLW  09
+0056:  BTFSS  03.0
+0057:  GOTO   07E
+....................          for(j = 0; j <= 7; j++){ 
+0058:  CLRF   2B
+0059:  MOVF   2B,W
+005A:  SUBLW  07
+005B:  BTFSS  03.0
+005C:  GOTO   075
+....................             output_bit(data, bit_test(digit[i], j)); 
+005D:  MOVLW  20
+005E:  ADDWF  2A,W
+005F:  MOVWF  04
+0060:  BCF    03.7
+0061:  MOVF   00,W
+0062:  MOVWF  2C
+0063:  MOVWF  77
+0064:  MOVF   2B,W
+0065:  MOVWF  78
+0066:  BTFSC  03.2
+0067:  GOTO   06C
+0068:  BCF    03.0
+0069:  RRF    77,F
+006A:  DECFSZ 78,F
+006B:  GOTO   068
+006C:  BTFSC  77.0
+006D:  GOTO   070
+006E:  BCF    06.0
+006F:  GOTO   071
+0070:  BSF    06.0
+....................              
+....................             output_high(clock); 
+0071:  BSF    06.1
+....................             output_low(clock); 
+0072:  BCF    06.1
+0073:  INCF   2B,F
+0074:  GOTO   059
+....................         } 
+....................       delay_ms(500); 
+0075:  MOVLW  02
+0076:  MOVWF  2C
+0077:  MOVLW  FA
+0078:  MOVWF  2D
+0079:  GOTO   004
+007A:  DECFSZ 2C,F
+007B:  GOTO   077
+007C:  INCF   2A,F
+007D:  GOTO   054
+....................      } 
+007E:  GOTO   053
+....................    } 
+....................     
+.................... } 
+....................  
+007F:  SLEEP
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

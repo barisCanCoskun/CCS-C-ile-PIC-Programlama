@@ -1,0 +1,77 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=1
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=muxing_port_with_74ls138.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=muxing_port_with_74ls138.c
+
+[muxing_port_with_74ls138.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=muxing_port_with_74ls138.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=muxing_port_with_74ls138.c
+t1=5
+Count=1
+
+[ProjectLog]
+Days=1
+D1=01-06-2019
+D1_L=4
+D1_L1=[65930]Project Closed.
+D1_L2=[65930]Project Opened.
+D1_L3=[66121]Started Editing.
+D1_L4=[66463]Stopped Editing.
+[Units]
+Count=1
+1=muxing_port_with_74ls138 (main)

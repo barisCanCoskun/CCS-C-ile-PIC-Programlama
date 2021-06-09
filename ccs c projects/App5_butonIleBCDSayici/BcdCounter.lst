@@ -1,0 +1,154 @@
+CCS PCM C Compiler, Version 5.084d, 1               31-May-19 18:30
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   Y:\ccs c projects\App5_butonIleBCDSayici\BcdCounter.lst
+
+               ROM used:   79 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           7 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   01B
+0003:  NOP
+.................... #include <16f877.h> 
+.................... //////////// Standard Header file for the PIC16F877 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877 
+....................  
+.................... #list 
+....................  
+....................  
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD 
+....................  
+.................... #use delay (clock = 4000000) 
+0004:  MOVLW  21
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  BCF    0A.3
+0019:  BCF    0A.4
+001A:  GOTO   044 (RETURN)
+....................  
+.................... #use fast_io(b) 
+.................... #use fast_io(a) 
+....................  
+.................... #define buton pin_A0 
+....................  
+.................... int i = 1; 
+....................  
+.................... void main() 
+001B:  MOVF   03,W
+001C:  ANDLW  1F
+001D:  MOVWF  03
+001E:  MOVLW  01
+001F:  MOVWF  20
+0020:  BSF    03.5
+0021:  BSF    1F.0
+0022:  BSF    1F.1
+0023:  BSF    1F.2
+0024:  BCF    1F.3
+0025:  BCF    03.7
+.................... { 
+....................    setup_psp(PSP_DISABLED); 
+0026:  BCF    09.4
+....................    setup_timer_1(T1_DISABLED); 
+0027:  BCF    03.5
+0028:  CLRF   10
+....................    setup_timer_2(T2_DISABLED, 0, 1); 
+0029:  MOVLW  00
+002A:  MOVWF  78
+002B:  MOVWF  12
+002C:  MOVLW  00
+002D:  BSF    03.5
+002E:  MOVWF  12
+....................    setup_adc_ports(NO_ANALOGS); 
+002F:  BSF    1F.0
+0030:  BSF    1F.1
+0031:  BSF    1F.2
+0032:  BCF    1F.3
+....................    setup_adc(ADC_OFF); 
+0033:  BCF    03.5
+0034:  BCF    1F.0
+....................    setup_CCP1(CCP_OFF); 
+0035:  MOVLW  F0
+0036:  ANDWF  17,F
+....................    setup_CCP2(CCP_OFF); 
+0037:  ANDWF  1D,F
+....................     
+....................    set_tris_a(0x01); 
+0038:  MOVLW  01
+0039:  BSF    03.5
+003A:  MOVWF  05
+....................    set_tris_b(0x00); 
+003B:  MOVLW  00
+003C:  MOVWF  06
+....................     
+....................    output_b(0x00); 
+003D:  BCF    03.5
+003E:  CLRF   06
+....................  
+....................    while(true){ 
+....................       if(input(buton)){ 
+003F:  BTFSS  05.0
+0040:  GOTO   04D
+....................          delay_ms(100); 
+0041:  MOVLW  64
+0042:  MOVWF  21
+0043:  GOTO   004
+....................           
+....................          output_b(i); 
+0044:  MOVF   20,W
+0045:  MOVWF  06
+....................          i++; 
+0046:  INCF   20,F
+....................           
+....................          while(input(buton)); 
+0047:  BTFSC  05.0
+0048:  GOTO   047
+....................           
+....................          if(i == 10) 
+0049:  MOVF   20,W
+004A:  SUBLW  0A
+004B:  BTFSC  03.2
+....................             i = 0; 
+004C:  CLRF   20
+....................       } 
+004D:  GOTO   03F
+....................     
+....................    } 
+....................     
+.................... } 
+004E:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

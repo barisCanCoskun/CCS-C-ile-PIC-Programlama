@@ -1,0 +1,86 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=1
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=portOkuma_bilgiGönderme.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=portOkuma_bilgiGönderme.c
+
+[portOkuma_bilgiGönderme.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=portOkuma_bilgiGönderme.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=portOkuma_bilgiGönderme.c
+t1=6
+Count=1
+
+[ProjectLog]
+Days=2
+D1=20-05-2019
+D1_L=5
+D1_L1=[78648]Project Closed.
+D1_L2=[78649]Project Opened.
+D1_L3=[78651]Started Editing.
+D1_L4=[78951]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L5=[83394]Project Closed.
+D2=21-05-2019
+D2_L=2
+D2_L1=[36331]Project Opened.
+D2_L2=[60073]Project Closed.
+[Units]
+Count=1
+1=portOkuma_bilgiGönderme (main)

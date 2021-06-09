@@ -1,0 +1,79 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020-024 A
+025-029 B
+02A-02E C
+02F-033 D
+034-038 E
+039-03D arti
+03E-042 cift_ok
+043-044 matris_karakter_gonder.harf
+045     matris_karakter_gonder.tekrar
+046     matris_karakter_gonder.i
+047     matris_karakter_gonder.j
+048     matris_karakter_gonder.k
+049     @delay_ms1.P1
+049     sutunSec.s
+049     matris_karakter_gonder.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  sutunSec
+00001C  @goto51839
+000025  matris_karakter_gonder
+000046  @delay_ms1
+000061  MAIN
+000061  @cinit1
+000069  @cinit2
+
+Project Directory:
+    Y:\ccs c projects\App13_matris_led_display\
+
+Project Files:
+    matris_led_display.c                                    [30-May-19 15:04  CRC=E8A018F9]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [06-Apr-19 10:06  CRC=7B95242E]
+
+Source signature=DFCA6155
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=7377
+
+Units:
+    Y:\ccs c projects\App13_matris_led_display\matris_led_display (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   matris_led_display.xsym
+    Errors:      matris_led_display.err
+    Ext Symbols: matris_led_display.esym
+    INHX8:       matris_led_display.hex
+    Symbols:     matris_led_display.sym
+    List:        matris_led_display.lst
+    Debug/COFF:  matris_led_display.cof
+    Project:     matris_led_display.ccspjt
+    Call Tree:   matris_led_display.tre
+    Statistics:  matris_led_display.STA

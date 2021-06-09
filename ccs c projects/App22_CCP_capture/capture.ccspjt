@@ -1,0 +1,80 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=1
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=capture.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=capture.c
+
+[capture.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=capture.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=capture.c
+t1=12
+2=capture.c
+t2=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=10-06-2019
+D1_L=5
+D1_L1=[64928]Project Closed.
+D1_L2=[64928]Project Opened.
+D1_L3=[64934]Started Editing.
+D1_L4=[65234]Stopped Editing.
+D1_L5=[67427]Project Closed.
+[Units]
+Count=1
+1=capture (main)

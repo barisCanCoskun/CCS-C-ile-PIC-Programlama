@@ -1,0 +1,241 @@
+CCS PCM C Compiler, Version 5.084d, 1               07-Jun-19 16:04
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   Y:\ccs c projects\App14_external_interrupt\ext_int.lst
+
+               ROM used:   151 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   13 (4%) at main() level
+                           15 (4%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   06F
+0003:  NOP
+0004:  MOVWF  7F
+0005:  SWAPF  03,W
+0006:  CLRF   03
+0007:  MOVWF  21
+0008:  MOVF   0A,W
+0009:  MOVWF  20
+000A:  CLRF   0A
+000B:  MOVF   04,W
+000C:  MOVWF  22
+000D:  MOVF   77,W
+000E:  MOVWF  23
+000F:  MOVF   78,W
+0010:  MOVWF  24
+0011:  MOVF   79,W
+0012:  MOVWF  25
+0013:  MOVF   7A,W
+0014:  MOVWF  26
+0015:  BCF    03.7
+0016:  BCF    03.5
+0017:  BTFSS  0B.4
+0018:  GOTO   01B
+0019:  BTFSC  0B.1
+001A:  GOTO   02C
+001B:  MOVF   22,W
+001C:  MOVWF  04
+001D:  MOVF   23,W
+001E:  MOVWF  77
+001F:  MOVF   24,W
+0020:  MOVWF  78
+0021:  MOVF   25,W
+0022:  MOVWF  79
+0023:  MOVF   26,W
+0024:  MOVWF  7A
+0025:  MOVF   20,W
+0026:  MOVWF  0A
+0027:  SWAPF  21,W
+0028:  MOVWF  03
+0029:  SWAPF  7F,F
+002A:  SWAPF  7F,W
+002B:  RETFIE
+002C:  BCF    0A.3
+002D:  BCF    0A.4
+002E:  GOTO   044
+....................  
+.................... #include <16f877.h> 
+.................... //////////// Standard Header file for the PIC16F877 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877 
+....................  
+.................... #list 
+....................  
+....................  
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD 
+....................  
+.................... #use delay (clock = 4000000) 
+002F:  MOVLW  29
+0030:  MOVWF  04
+0031:  BCF    03.7
+0032:  MOVF   00,W
+0033:  BTFSC  03.2
+0034:  GOTO   043
+0035:  MOVLW  01
+0036:  MOVWF  78
+0037:  CLRF   77
+0038:  DECFSZ 77,F
+0039:  GOTO   038
+003A:  DECFSZ 78,F
+003B:  GOTO   037
+003C:  MOVLW  4A
+003D:  MOVWF  77
+003E:  DECFSZ 77,F
+003F:  GOTO   03E
+0040:  GOTO   041
+0041:  DECFSZ 00,F
+0042:  GOTO   035
+0043:  RETURN
+....................  
+.................... #use fast_io(b) 
+....................  
+.................... char i; 
+....................  
+.................... #int_ext 
+.................... void ext_kesmesi() 
+.................... { 
+....................    output_high(pin_b1); 
+0044:  BSF    06.1
+....................    delay_ms(1000); 
+0045:  MOVLW  04
+0046:  MOVWF  28
+0047:  MOVLW  FA
+0048:  MOVWF  29
+0049:  CALL   02F
+004A:  DECFSZ 28,F
+004B:  GOTO   047
+....................    output_low(pin_b1); 
+004C:  BCF    06.1
+....................    delay_ms(3000); 
+004D:  MOVLW  0C
+004E:  MOVWF  28
+004F:  MOVLW  FA
+0050:  MOVWF  29
+0051:  CALL   02F
+0052:  DECFSZ 28,F
+0053:  GOTO   04F
+....................     
+....................    for(i = 0; i <= 9; i++){ 
+0054:  CLRF   27
+0055:  MOVF   27,W
+0056:  SUBLW  09
+0057:  BTFSS  03.0
+0058:  GOTO   06B
+....................       output_high(pin_b1); 
+0059:  BSF    06.1
+....................       delay_ms(500); 
+005A:  MOVLW  02
+005B:  MOVWF  28
+005C:  MOVLW  FA
+005D:  MOVWF  29
+005E:  CALL   02F
+005F:  DECFSZ 28,F
+0060:  GOTO   05C
+....................       output_low(pin_b1); 
+0061:  BCF    06.1
+....................       delay_ms(500); 
+0062:  MOVLW  02
+0063:  MOVWF  28
+0064:  MOVLW  FA
+0065:  MOVWF  29
+0066:  CALL   02F
+0067:  DECFSZ 28,F
+0068:  GOTO   064
+0069:  INCF   27,F
+006A:  GOTO   055
+....................    } 
+006B:  BCF    0B.1
+006C:  BCF    0A.3
+006D:  BCF    0A.4
+006E:  GOTO   01B
+.................... } 
+....................  
+.................... void main() 
+006F:  MOVF   03,W
+0070:  ANDLW  1F
+0071:  MOVWF  03
+0072:  BSF    03.5
+0073:  BSF    1F.0
+0074:  BSF    1F.1
+0075:  BSF    1F.2
+0076:  BCF    1F.3
+0077:  BCF    03.7
+.................... { 
+....................    setup_psp(PSP_DISABLED); 
+0078:  BCF    09.4
+....................    setup_timer_1(T1_DISABLED); 
+0079:  BCF    03.5
+007A:  CLRF   10
+....................    setup_timer_2(T2_DISABLED, 0, 1); 
+007B:  MOVLW  00
+007C:  MOVWF  78
+007D:  MOVWF  12
+007E:  MOVLW  00
+007F:  BSF    03.5
+0080:  MOVWF  12
+....................    setup_adc_ports(NO_ANALOGS); 
+0081:  BSF    1F.0
+0082:  BSF    1F.1
+0083:  BSF    1F.2
+0084:  BCF    1F.3
+....................    setup_adc(ADC_OFF); 
+0085:  BCF    03.5
+0086:  BCF    1F.0
+....................    setup_CCP1(CCP_OFF); 
+0087:  MOVLW  F0
+0088:  ANDWF  17,F
+....................    setup_CCP2(CCP_OFF); 
+0089:  ANDWF  1D,F
+....................     
+....................    set_tris_b(0x01); 
+008A:  MOVLW  01
+008B:  BSF    03.5
+008C:  MOVWF  06
+....................    output_b(0x00); 
+008D:  BCF    03.5
+008E:  CLRF   06
+....................     
+....................    ext_int_edge(H_TO_L); 
+008F:  BSF    03.5
+0090:  BCF    01.6
+....................     
+....................    enable_interrupts(INT_EXT); 
+0091:  BCF    03.5
+0092:  BSF    0B.4
+....................    enable_interrupts(GLOBAL); 
+0093:  MOVLW  C0
+0094:  IORWF  0B,F
+....................     
+....................    while(true); 
+0095:  GOTO   095
+....................     
+.................... } 
+....................  
+0096:  SLEEP
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

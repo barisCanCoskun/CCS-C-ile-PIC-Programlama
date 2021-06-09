@@ -1,0 +1,29 @@
+Compiling Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD on 19-Jun-19 at 12:41
+*** Error 1 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 1(0,1): Illegal C character in input file  0xD0
+*** Error 1 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 1(0,1): Illegal C character in input file  0xDC
+*** Error 49 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 21(19,20): Expecting LVALUE such as a variable name  or  * expression
+*** Error 51 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 22(12,15): A numeric expression must appear here  ::
+*** Error 51 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 26(12,14): A numeric expression must appear here  ::
+*** Error 49 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 29(18,22): Expecting LVALUE such as a variable name  or  * expression
+*** Error 51 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 30(12,15): A numeric expression must appear here  ::
+*** Error 51 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 34(12,14): A numeric expression must appear here  ::
+*** Error 49 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 50(18,19): Expecting LVALUE such as a variable name  or  * expression
+*** Error 51 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 55(12,14): A numeric expression must appear here  ::
+*** Error 49 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 58(17,21): Expecting LVALUE such as a variable name  or  * expression
+*** Error 51 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 63(12,14): A numeric expression must appear here  ::
+*** Error 51 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 79(12,15): A numeric expression must appear here  ::
+*** Error 51 "C:\Program Files (x86)\PICC\Drivers\ozel_karakter_LCD.c" Line 80(12,14): A numeric expression must appear here  ::
+*** Error 102 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 21(15,23): Expect comma
+*** Error 102 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 22(15,23): Expect comma
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 29(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 32(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 37(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 39(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 40(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 41(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 42(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 43(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 44(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 45(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 46(14,22): A numeric expression must appear here
+*** Error 51 "Y:\ccs c projects\App31_özel_karakterli_LCD\özel_karakterli_LCD.c" Line 49(14,22): A numeric expression must appear here

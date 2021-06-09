@@ -1,0 +1,155 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+006     lcd
+006     lcdlat
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     x
+021-024 y
+025     z
+026-027 @sprintf_string
+028     @PRINTF_D_656.P1
+028-02B @PRINTF_L32D_656FPFPF.P2
+028     @PSTRINGCN7_656.P3
+028     lcd_init.i
+028     lcd_getc.x
+028     MAIN.@SCRATCH1
+028     @PSTRINGC7_656.@SCRATCH1
+029-02C lcd_init.LCD_INIT_STRING
+029     lcd_getc.y
+029     @PRINTF_D_656.P1
+029     @PSTRINGC7_656.@SCRATCH2
+029     @PSTRINGCN7_656.@SCRATCH1
+02A     lcd_getc.value
+02A     @PSTRINGC7_656.@SCRATCH3
+02A     @PSTRINGCN7_656.@SCRATCH2
+02A     @PRINTF_D_656.@SCRATCH1
+02B     lcd_getc.@SCRATCH1
+02B     @PSTRINGC7_656.@SCRATCH4
+02B     @PSTRINGCN7_656.@SCRATCH3
+02B     @PRINTF_D_656.@SCRATCH2
+02C     @PRINTF_L32D_656FPFPF.P1
+02C     @PSTRINGCN7_656.@SCRATCH4
+02C     @PRINTF_D_656.@SCRATCH3
+02D     lcd_init.@SCRATCH1
+02D     @PRINTF_D_656.@SCRATCH4
+02D     @PRINTF_L32D_656FPFPF.@SCRATCH1
+02E     @DIV88.P1
+02E     @PRINTF_L32D_656FPFPF.@SCRATCH2
+02F     @DIV88.P1
+02F     @PRINTF_L32D_656FPFPF.@SCRATCH3
+030     @DIV88.@SCRATCH1
+030     @PRINTF_L32D_656FPFPF.@SCRATCH4
+031     @PRINTF_L32D_656FPFPF.@SCRATCH5
+032     @PRINTF_L32D_656FPFPF.@SCRATCH6
+033     @PRINTF_L32D_656FPFPF.@SCRATCH7
+034     @PRINTF_L32D_656FPFPF.@SCRATCH8
+035-038 @MULFF.P1
+035-038 @DIV3232.P2
+035     lcd_putc.c
+035-038 @FTOSD.P1
+036     lcd_gotoxy.x
+036     @delay_ms1.P1
+037     lcd_gotoxy.y
+038     lcd_gotoxy.address
+039-03C @MULFF.P1
+039-03C @DIV3232.P2
+039     lcd_gotoxy.@SCRATCH1
+039     @FTOSD.@SCRATCH1
+03A     lcd_send_byte.address
+03B     lcd_send_byte.n
+03C     lcd_read_byte.low
+03C     lcd_send_byte.@SCRATCH1
+03D     lcd_send_nibble.n
+03D     lcd_read_byte.high
+03D     @MULFF.@SCRATCH1
+03D     @DIV3232.@SCRATCH1
+03E     lcd_read_byte.@SCRATCH1
+03E     @MULFF.@SCRATCH2
+03E     @DIV3232.@SCRATCH2
+03F     @MULFF.@SCRATCH3
+03F     @DIV3232.@SCRATCH3
+040     @MULFF.@SCRATCH4
+040     @DIV3232.@SCRATCH4
+041     @MULFF.@SCRATCH5
+041     @DIV3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+086     lcdtris
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const674.call
+00000A  @const679.call
+000012  @const680.call
+00001A  @const689.call
+000022  @const701.call
+000026  @delay_ms1
+00003B  lcd_send_nibble
+000047  lcd_read_nibble
+00004D  lcd_read_byte
+00006F  lcd_send_byte
+00008F  lcd_init
+0000CD  lcd_gotoxy
+0000DF  lcd_putc
+00010B  @PSTRINGC7_656
+000161  @PSTRINGCN7_656
+0001B8  @DIV88
+0001CD  @PRINTF_D_656
+000226  @DIV3232
+000275  @PRINTF_L32D_656FPFPF
+000289  @MULFF
+00030F  @FTOSD
+0003CA  lcd_getc
+0003DE  MAIN
+0003DE  @cinit1
+0003E8  @cinit2
+
+Project Directory:
+    Y:\ccs c projects\App28_char_LCD\
+
+Project Files:
+    char_lcd.c                                              [16-Jun-19 17:31  CRC=685A7AE9]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [06-Apr-19 10:06  CRC=7B95242E]
+    C:\Program Files (x86)\PICC\Drivers\lcd.c               [22-Feb-16 10:05  CRC=D1A6378A]
+
+Source signature=873C0E2B
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=CC6C
+
+Units:
+    Y:\ccs c projects\App28_char_LCD\char_lcd (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   char_lcd.xsym
+    Errors:      char_lcd.err
+    Ext Symbols: char_lcd.esym
+    INHX8:       char_lcd.hex
+    Symbols:     char_lcd.sym
+    List:        char_lcd.lst
+    Debug/COFF:  char_lcd.cof
+    Project:     char_lcd.ccspjt
+    Call Tree:   char_lcd.tre
+    Statistics:  char_lcd.STA

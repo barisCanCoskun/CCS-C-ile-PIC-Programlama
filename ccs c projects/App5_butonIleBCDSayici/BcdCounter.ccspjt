@@ -1,0 +1,96 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=10
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=BcdCounter.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=BcdCounter.c
+
+[BcdCounter.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=BcdCounter.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=BcdCounter.c
+t1=13
+2=BcdCounter.lst
+t2=1
+Count=1
+
+[ProjectLog]
+Days=2
+D1=21-05-2019
+D1_L=14
+D1_L1=[60077]Project Closed.
+D1_L2=[60077]Project Opened.
+D1_L3=[60104]Started Editing.
+D1_L4=[60914]Stopped Editing.
+D1_L5=[61361]Started Editing.
+D1_L6=[61686]Stopped Editing.
+D1_L7=[62091]Started Editing.
+D1_L8=[62393]Stopped Editing.
+D1_L9=[62544]Started Editing.
+D1_L10=[62874]Stopped Editing.
+D1_L11=[64479]Started Editing.
+D1_L12=[64781]Stopped Editing.
+D1_L13=[65215]Started Editing.
+D1_L14=[65228]Project Closed.
+D2=31-05-2019
+D2_L=5
+D2_L1=[58890]Project Opened.
+D2_L2=[58891]Project Opened.
+D2_L3=[65857]Project Opened.
+D2_L4=[66061]Started Editing.
+D2_L5=[66925]Stopped Editing.
+[Units]
+Count=1
+1=BcdCounter (main)

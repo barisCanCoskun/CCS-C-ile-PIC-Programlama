@@ -1,0 +1,86 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=1
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=buton_ile_led_kontrol.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=buton_ile_led_kontrol.c
+
+[buton_ile_led_kontrol.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=buton_ile_led_kontrol.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=buton_ile_led_kontrol.c
+t1=13
+Count=1
+
+[ProjectLog]
+Days=1
+D1=20-05-2019
+D1_L=9
+D1_L1=[56094]Project Closed.
+D1_L2=[56094]Project Opened.
+D1_L3=[56231]Started Editing.
+D1_L4=[56921]Stopped Editing.
+D1_L5=[57238]Started Editing.
+D1_L6=[57732]Stopped Editing.
+TotalEdit=10
+TotalDebug=0
+D1_E=10
+D1_D=0
+D1_L7=[64569]Project Closed.
+D1_L8=[70135]Project Opened.
+D1_L9=[70208]Project Closed.
+[Units]
+Count=1
+1=buton_ile_led_kontrol (main)

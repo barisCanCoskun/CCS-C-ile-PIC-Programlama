@@ -1,0 +1,109 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=16
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=benim_LCD_uygulamam.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=benim_LCD_uygulamam.c
+
+[benim_LCD_uygulamam.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=benim_LCD_uygulamam.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=..\App31_özel_karakterli_LCD\özel_karakterli_LCD.c
+t1=1
+2=benim_LCD_uygulamam.c
+t2=1
+Count=1
+
+[ProjectLog]
+Days=4
+D1=16-06-2019
+D1_L=5
+D1_L1=[75442]Project Closed.
+D1_L2=[75442]Project Opened.
+D1_L3=[75446]Started Editing.
+D1_L4=[75746]Stopped Editing.
+TotalEdit=2
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L5=[76090]Project Closed.
+D2=17-06-2019
+D2_L=2
+D2_L1=[54504]Project Opened.
+D2_L2=[76159]Project Closed.
+D3=18-06-2019
+D3_L=8
+D3_L1=[52832]Project Opened.
+D3_L2=[52844]Started Editing.
+D3_L3=[53161]Stopped Editing.
+D3_L4=[53747]Started Editing.
+D3_L5=[54048]Stopped Editing.
+D3_L6=[54515]Started Editing.
+D3_L7=[54825]Stopped Editing.
+D3_E=1
+D3_D=0
+D3_L8=[55645]Project Closed.
+D4=19-06-2019
+D4_L=7
+D4_L1=[43985]Project Opened.
+D4_L2=[44025]Started Editing.
+D4_L3=[44325]Stopped Editing.
+D4_L4=[44468]Started Editing.
+D4_L5=[44768]Stopped Editing.
+D4_L6=[45263]Started Editing.
+D4_L7=[45370]Project Closed.
+[Units]
+Count=1
+1=benim_LCD_uygulamam (main)

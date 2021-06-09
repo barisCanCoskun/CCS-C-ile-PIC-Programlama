@@ -1,0 +1,5 @@
+Compiling Y:\ccs c projects\App15_rb4-rb7_on_change_interrupt\on_change_int on 07-Jun-19 at 16:29
+>>> Warning 202 "Y:\ccs c projects\App15_rb4-rb7_on_change_interrupt\on_change_int.c" Line 10(6,7): Variable never used:   i
+      Memory usage:   ROM=1%      RAM=4% - 4%
+      0 Errors,  1 Warnings.
+Build Successful.

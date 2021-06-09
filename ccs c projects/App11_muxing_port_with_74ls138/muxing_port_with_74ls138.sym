@@ -1,0 +1,64 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     i
+021     @delay_ms1.P1
+021     main.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @delay_ms1
+000019  @cinit1
+000019  main
+000022  @cinit2
+
+Project Directory:
+    Y:\ccs c projects\App11_muxing_port_with_74ls138\
+
+Project Files:
+    muxing_port_with_74ls138.c                              [01-Jun-19 18:23  CRC=AA1B0B4B]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [06-Apr-19 10:06  CRC=7B95242E]
+
+Source signature=A14553A7
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=A9EC
+
+Units:
+    Y:\ccs c projects\App11_muxing_port_with_74ls138\muxing_port_with_74ls138 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   muxing_port_with_74ls138.xsym
+    Errors:      muxing_port_with_74ls138.err
+    Ext Symbols: muxing_port_with_74ls138.esym
+    INHX8:       muxing_port_with_74ls138.hex
+    Symbols:     muxing_port_with_74ls138.sym
+    List:        muxing_port_with_74ls138.lst
+    Debug/COFF:  muxing_port_with_74ls138.cof
+    Project:     muxing_port_with_74ls138.ccspjt
+    Call Tree:   muxing_port_with_74ls138.tre
+    Statistics:  muxing_port_with_74ls138.STA

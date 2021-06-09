@@ -1,0 +1,105 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020     @TRIS_C
+021     veri
+022     adres
+023     islem
+024     read_ext_eeprom.address
+024     gethex.lo
+024     write_ext_eeprom.address
+024     MAIN.@SCRATCH1
+024     @PSTRINGC7_9600_62_63.@SCRATCH1
+025     write_ext_eeprom.data
+025     @PRINTF_X_9600_62_63.P1
+025     @PSTRINGCN7_9600_62_63.P2
+025     gethex.hi
+025     read_ext_eeprom.data
+025     @PSTRINGC7_9600_62_63.@SCRATCH2
+026.0   ext_eeprom_ready.ack
+026     @I2C_READ_2.P1
+026     @PRINTF_X_9600_62_63.P2
+026     gethex1.digit
+026     gethex.@SCRATCH1
+026     @PSTRINGC7_9600_62_63.@SCRATCH3
+026     @PSTRINGCN7_9600_62_63.@SCRATCH1
+027     @I2C_WRITE_2.P1
+027     gethex1.@SCRATCH1
+027     @I2C_READ_2.@SCRATCH1
+027     @PSTRINGC7_9600_62_63.@SCRATCH4
+027     @PSTRINGCN7_9600_62_63.@SCRATCH2
+028     @I2C_READ_2.@SCRATCH2
+028     @PSTRINGCN7_9600_62_63.@SCRATCH3
+029     @PSTRINGCN7_9600_62_63.@SCRATCH4
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const649.call
+000012  @const651.call
+000029  @const652.call
+000037  @const653.call
+000043  @const654.call
+000052  @const655.call
+000065  @const656.call
+00006C  @const662.call
+000082  @const663.call
+00008C  @PSTRINGC7_9600_62_63
+0000D9  gethex1
+0000FA  gethex
+000110  @I2C_WRITE_2
+00015A  ext_eeprom_ready
+000195  read_ext_eeprom
+0001D7  @I2C_READ_2
+000238  @PSTRINGCN7_9600_62_63
+000290  @PRINTF_X_9600_62_63
+0002B5  write_ext_eeprom
+0002F4  MAIN
+0002F4  @cinit1
+000303  @cinit2
+
+Project Directory:
+    Y:\ccs c\ccs c projects\App42_i2c_with_24c02\
+
+Project Files:
+    i2c_with_24c02.c                                        [12-Jul-19 13:55  CRC=E7AE6386]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [21-Jun-13 16:04  CRC=A355A189]
+    C:\Program Files (x86)\PICC\Drivers\input.c             [01-May-13 13:38  CRC=8C3C8665]
+    C:\Program Files (x86)\PICC\Drivers\ctype.h             [03-Jan-08 13:55  CRC=2D1F019F]
+    C:\Program Files (x86)\PICC\Drivers\2402.c              [23-Jul-03 14:53  CRC=0E465FD3]
+
+Source signature=60EC4CB9
+
+Units:
+    i2c_with_24c02 (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   i2c_with_24c02.xsym
+    Errors:      i2c_with_24c02.err
+    Ext Symbols: i2c_with_24c02.esym
+    INHX8:       i2c_with_24c02.hex
+    Symbols:     i2c_with_24c02.sym
+    List:        i2c_with_24c02.lst
+    Debug/COFF:  i2c_with_24c02.cof
+    Project:     i2c_with_24c02.ccspjt
+    Call Tree:   i2c_with_24c02.tre
+    Statistics:  i2c_with_24c02.STA

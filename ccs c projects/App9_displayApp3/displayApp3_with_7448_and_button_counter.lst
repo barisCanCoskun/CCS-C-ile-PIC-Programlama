@@ -1,0 +1,312 @@
+CCS PCM C Compiler, Version 5.084d, 1               15-Jun-19 15:37
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+               Filename:   Y:\ccs c projects\App9_displayApp3\displayApp3_with_7448_and_button_counter.lst
+
+               ROM used:   193 words (2%)
+                           Largest free fragment is 2048
+               RAM used:   9 (2%) at main() level
+                           11 (3%) worst case
+               Stack used: 1 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   03C
+0003:  NOP
+....................  
+.................... #include <16f877.h> 
+.................... //////////// Standard Header file for the PIC16F877 device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877 
+0004:  BCF    0A.0
+0005:  BCF    0A.1
+0006:  BCF    0A.2
+0007:  ADDWF  02,F
+0008:  RETLW  00
+0009:  RETLW  01
+000A:  RETLW  02
+000B:  RETLW  03
+000C:  RETLW  04
+000D:  RETLW  05
+000E:  RETLW  06
+000F:  RETLW  07
+0010:  RETLW  08
+0011:  RETLW  09
+*
+0027:  MOVF   24,W
+0028:  CLRF   78
+0029:  SUBWF  23,W
+002A:  BTFSC  03.0
+002B:  GOTO   02F
+002C:  MOVF   23,W
+002D:  MOVWF  77
+002E:  GOTO   03B
+002F:  CLRF   77
+0030:  MOVLW  08
+0031:  MOVWF  25
+0032:  RLF    23,F
+0033:  RLF    77,F
+0034:  MOVF   24,W
+0035:  SUBWF  77,W
+0036:  BTFSC  03.0
+0037:  MOVWF  77
+0038:  RLF    78,F
+0039:  DECFSZ 25,F
+003A:  GOTO   032
+003B:  RETURN
+....................  
+.................... #list 
+....................  
+....................  
+.................... #fuses XT, NOWDT, NOPROTECT, NOBROWNOUT, NOLVP, NOPUT, NOWRT, NODEBUG, NOCPD 
+....................  
+.................... #use delay (clock = 4000000) 
+*
+0012:  MOVLW  23
+0013:  MOVWF  04
+0014:  BCF    03.7
+0015:  MOVF   00,W
+0016:  BTFSC  03.2
+0017:  GOTO   026
+0018:  MOVLW  01
+0019:  MOVWF  78
+001A:  CLRF   77
+001B:  DECFSZ 77,F
+001C:  GOTO   01B
+001D:  DECFSZ 78,F
+001E:  GOTO   01A
+001F:  MOVLW  4A
+0020:  MOVWF  77
+0021:  DECFSZ 77,F
+0022:  GOTO   021
+0023:  GOTO   024
+0024:  DECFSZ 00,F
+0025:  GOTO   018
+0026:  RETURN
+....................  
+.................... #use fast_io(a) 
+.................... #use fast_io(b) 
+....................  
+.................... #define arttir pin_a0 
+.................... #define azalt pin_a1 
+.................... #define buton pin_a2 
+....................  
+.................... char birler = 0, onlar = 0, sayi = 0; 
+....................  
+.................... const int digit[10] = {0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07,  
+....................                        0x08, 0x09}; 
+....................  
+.................... void main() 
+*
+003C:  MOVF   03,W
+003D:  ANDLW  1F
+003E:  MOVWF  03
+003F:  CLRF   20
+0040:  CLRF   21
+0041:  CLRF   22
+0042:  BSF    03.5
+0043:  BSF    1F.0
+0044:  BSF    1F.1
+0045:  BSF    1F.2
+0046:  BCF    1F.3
+0047:  BCF    03.7
+.................... { 
+....................    setup_psp(PSP_DISABLED); 
+0048:  BCF    09.4
+....................    setup_timer_1(T1_DISABLED); 
+0049:  BCF    03.5
+004A:  CLRF   10
+....................    setup_timer_2(T2_DISABLED, 0, 1); 
+004B:  MOVLW  00
+004C:  MOVWF  78
+004D:  MOVWF  12
+004E:  MOVLW  00
+004F:  BSF    03.5
+0050:  MOVWF  12
+....................    setup_adc_ports(NO_ANALOGS); 
+0051:  BSF    1F.0
+0052:  BSF    1F.1
+0053:  BSF    1F.2
+0054:  BCF    1F.3
+....................    setup_adc(ADC_OFF); 
+0055:  BCF    03.5
+0056:  BCF    1F.0
+....................    setup_CCP1(CCP_OFF); 
+0057:  MOVLW  F0
+0058:  ANDWF  17,F
+....................    setup_CCP2(CCP_OFF); 
+0059:  ANDWF  1D,F
+....................     
+....................    set_tris_a(0x03); 
+005A:  MOVLW  03
+005B:  BSF    03.5
+005C:  MOVWF  05
+....................    set_tris_b(0x00); 
+005D:  MOVLW  00
+005E:  MOVWF  06
+....................  
+....................    while(true){ 
+....................       output_b(digit[birler] | (0b00010000)); 
+005F:  BCF    03.5
+0060:  MOVF   20,W
+0061:  CALL   004
+0062:  IORLW  10
+0063:  MOVWF  23
+0064:  MOVWF  06
+....................       delay_ms(5); 
+0065:  MOVLW  05
+0066:  MOVWF  23
+0067:  CALL   012
+....................        
+....................       output_b(digit[onlar] | (0b00100000)); 
+0068:  MOVF   21,W
+0069:  CALL   004
+006A:  IORLW  20
+006B:  MOVWF  23
+006C:  MOVWF  06
+....................       delay_ms(5); 
+006D:  MOVLW  05
+006E:  MOVWF  23
+006F:  CALL   012
+....................        
+....................       if(input(arttir)){ 
+0070:  BTFSS  05.0
+0071:  GOTO   094
+....................          sayi++; 
+0072:  INCF   22,F
+....................           
+....................          birler = sayi % 10; 
+0073:  MOVF   22,W
+0074:  MOVWF  23
+0075:  MOVLW  0A
+0076:  MOVWF  24
+0077:  CALL   027
+0078:  MOVF   77,W
+0079:  MOVWF  20
+....................          onlar = sayi / 10; 
+007A:  MOVF   22,W
+007B:  MOVWF  23
+007C:  MOVLW  0A
+007D:  MOVWF  24
+007E:  CALL   027
+007F:  MOVF   78,W
+0080:  MOVWF  21
+....................           
+....................          while(input(arttir)){ 
+0081:  BTFSS  05.0
+0082:  GOTO   094
+....................             output_b(digit[birler] | (0b00010000)); 
+0083:  MOVF   20,W
+0084:  CALL   004
+0085:  IORLW  10
+0086:  MOVWF  23
+0087:  MOVWF  06
+....................             delay_ms(5); 
+0088:  MOVLW  05
+0089:  MOVWF  23
+008A:  CALL   012
+....................        
+....................             output_b(digit[onlar] | (0b00100000)); 
+008B:  MOVF   21,W
+008C:  CALL   004
+008D:  IORLW  20
+008E:  MOVWF  23
+008F:  MOVWF  06
+....................             delay_ms(5); 
+0090:  MOVLW  05
+0091:  MOVWF  23
+0092:  CALL   012
+0093:  GOTO   081
+....................          } 
+....................       } 
+....................        
+....................       if(input(azalt) && sayi != 0){ 
+0094:  BTFSS  05.1
+0095:  GOTO   0BB
+0096:  MOVF   22,F
+0097:  BTFSC  03.2
+0098:  GOTO   0BB
+....................          sayi--; 
+0099:  DECF   22,F
+....................           
+....................          birler = sayi % 10; 
+009A:  MOVF   22,W
+009B:  MOVWF  23
+009C:  MOVLW  0A
+009D:  MOVWF  24
+009E:  CALL   027
+009F:  MOVF   77,W
+00A0:  MOVWF  20
+....................          onlar = sayi / 10; 
+00A1:  MOVF   22,W
+00A2:  MOVWF  23
+00A3:  MOVLW  0A
+00A4:  MOVWF  24
+00A5:  CALL   027
+00A6:  MOVF   78,W
+00A7:  MOVWF  21
+....................           
+....................          while(input(azalt)){ 
+00A8:  BTFSS  05.1
+00A9:  GOTO   0BB
+....................             output_b(digit[birler] | (0b00010000)); 
+00AA:  MOVF   20,W
+00AB:  CALL   004
+00AC:  IORLW  10
+00AD:  MOVWF  23
+00AE:  MOVWF  06
+....................             delay_ms(5); 
+00AF:  MOVLW  05
+00B0:  MOVWF  23
+00B1:  CALL   012
+....................        
+....................             output_b(digit[onlar] | (0b00100000)); 
+00B2:  MOVF   21,W
+00B3:  CALL   004
+00B4:  IORLW  20
+00B5:  MOVWF  23
+00B6:  MOVWF  06
+....................             delay_ms(5); 
+00B7:  MOVLW  05
+00B8:  MOVWF  23
+00B9:  CALL   012
+00BA:  GOTO   0A8
+....................          } 
+....................       } 
+....................        
+....................       if(sayi == 100) 
+00BB:  MOVF   22,W
+00BC:  SUBLW  64
+00BD:  BTFSC  03.2
+....................          sayi = 0; 
+00BE:  CLRF   22
+00BF:  GOTO   060
+....................    } 
+....................     
+.................... } 
+....................  
+00C0:  SLEEP
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: 3F39   XT NOWDT NOPUT NOBROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

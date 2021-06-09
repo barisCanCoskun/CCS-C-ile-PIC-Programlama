@@ -1,0 +1,54 @@
+[PROJECT]
+Target=ADC_LM35_temp_sensor.hex
+Processor_Text=PIC16F877
+CCSVersion=5.007
+Compiler=PCM
+Development_Mode=
+ToolSuite=CCS
+[Target Data]
+FileList=ADC_LM35_temp_sensor.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+Library=
+LinkerScript=
+[ADC_LM35_temp_sensor.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[mru-list]
+1=ADC_LM35_temp_sensor.c
+[Units]
+Count=1
+1=ADC_LM35_temp_sensor
+Link=0
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+[fileformats]
+forcecoff=1
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[Opened Files]
+1=ADC_LM35_temp_sensor.c
+2=..\App36_Internal_EEPROM_1_kronometre\hafizali_kronometre.c
+3=

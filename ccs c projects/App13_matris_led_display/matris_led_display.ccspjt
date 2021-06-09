@@ -1,0 +1,91 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=5
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=matris_led_display.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=matris_led_display.c
+
+[matris_led_display.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=matris_led_display.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=matris_led_display.c
+t1=9
+2=matris_led_display.c
+t2=1
+Count=1
+
+[ProjectLog]
+Days=1
+D1=30-05-2019
+D1_L=16
+D1_L1=[43421]Project Closed.
+D1_L2=[43421]Project Opened.
+D1_L3=[43432]Started Editing.
+D1_L4=[43732]Stopped Editing.
+D1_L5=[44217]Started Editing.
+D1_L6=[47901]Stopped Editing.
+D1_L7=[50826]Started Editing.
+D1_L8=[51126]Stopped Editing.
+D1_L9=[51378]Started Editing.
+D1_L10=[51678]Stopped Editing.
+D1_L11=[52053]Started Editing.
+D1_L12=[52354]Stopped Editing.
+D1_L13=[54211]Started Editing.
+D1_L14=[54534]Stopped Editing.
+D1_L15=[55281]Started Editing.
+D1_L16=[55346]Project Closed.
+[Units]
+Count=1
+1=matris_led_display (main)

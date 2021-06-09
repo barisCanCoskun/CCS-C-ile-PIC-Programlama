@@ -1,0 +1,90 @@
+[Directories]
+Include=
+Library=
+LinkerScript=
+output=
+
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+buildcount=3
+
+[fileformats]
+forcecoff=0
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+expandtree=0
+allerrors=1
+allwarnings=1
+stayupne=3
+stayupoe=0
+
+[PROJECT]
+Target=compare.hex
+Development_Mode=
+Processor_Text=PIC16F877
+ToolSuite=CCS
+CCSVersion=5.084d
+Compiler=PCM
+
+[Target Data]
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+FileList=compare.c
+
+[compare.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+
+[mru-list]
+1=compare.c
+
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+
+
+[CompilerVersion]
+Fixed=
+
+[Opened Files]
+1=compare.c
+t1=29
+2=compare.c
+t2=1
+Count=1
+
+[ProjectLog]
+Days=2
+D1=10-06-2019
+D1_L=7
+D1_L1=[67430]Project Closed.
+D1_L2=[67430]Project Opened.
+D1_L3=[67431]Started Editing.
+D1_L4=[67731]Stopped Editing.
+D1_L5=[67863]Started Editing.
+D1_L6=[68176]Stopped Editing.
+TotalEdit=1
+TotalDebug=0
+D1_E=1
+D1_D=0
+D1_L7=[74541]Project Closed.
+D2=11-06-2019
+D2_L=2
+D2_L1=[47279]Project Opened.
+D2_L2=[47303]Project Closed.
+[Units]
+Count=1
+1=compare (main)

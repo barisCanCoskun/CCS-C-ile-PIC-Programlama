@@ -1,0 +1,85 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+004-005 @WRITE_PROGRAM_MEMORY8.P2
+008     PSP_DATA
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2_LOW
+01B     CCP_2
+01C     CCP_2_HIGH
+020-021 @sprintf_string
+022     imlec.satir
+022     lcd_hazirla.i
+022     MAIN.@SCRATCH1
+022     @PSTRINGC7_632.@SCRATCH1
+023     imlec.sutun
+023     lcd_hazirla.@SCRATCH1
+023     @PSTRINGC7_632.@SCRATCH2
+024     imlec.@SCRATCH1
+024     @PSTRINGC7_632.@SCRATCH3
+025     lcd_veri.veri
+025     lcd_komut.komut
+025     @PSTRINGC7_632.@SCRATCH4
+026     @delay_ms1.P1
+026     lcd_komut.@SCRATCH1
+026     lcd_veri.@SCRATCH1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+
+ROM Allocation:
+000004  @const642.call
+00000C  @const647.call
+000011  @delay_ms1
+000026  lcd_komut
+00005A  lcd_hazirla
+0000AB  imlec
+0000BF  lcd_veri
+0000F3  @PSTRINGC7_632
+000149  @cinit1
+000149  MAIN
+000153  @cinit2
+
+Project Directory:
+    Y:\ccs c projects\App30_benim_LCD\
+
+Project Files:
+    benim_LCD_uygulamam.c                                   [18-Jun-19 15:02  CRC=0DCDA056]
+    C:\Program Files (x86)\PICC\Devices\16f877.h            [06-Apr-19 10:06  CRC=7B95242E]
+    C:\Program Files (x86)\PICC\Drivers\benim_LCD.c         [17-Jun-19 20:22  CRC=AB52222B]
+
+Source signature=E00708DA
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=35FE
+
+Units:
+    Y:\ccs c projects\App30_benim_LCD\benim_LCD_uygulamam (main)
+
+Compiler Settings:
+    Processor:      PIC16F877
+    Pointer Size:   16
+    ADC Range:      0-255
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Compiler operating in Evaluation Mode
+To obtain a fully enabled compiler visit www.ccsinfo.com/products
+
+Output Files:
+    XREF file:   benim_LCD_uygulamam.xsym
+    Errors:      benim_LCD_uygulamam.err
+    Ext Symbols: benim_LCD_uygulamam.esym
+    INHX8:       benim_LCD_uygulamam.hex
+    Symbols:     benim_LCD_uygulamam.sym
+    List:        benim_LCD_uygulamam.lst
+    Debug/COFF:  benim_LCD_uygulamam.cof
+    Project:     benim_LCD_uygulamam.ccspjt
+    Call Tree:   benim_LCD_uygulamam.tre
+    Statistics:  benim_LCD_uygulamam.STA
